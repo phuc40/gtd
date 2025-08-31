@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/ping",
+      "destination": "http://211.253.26.47:8093/ping.php"
+    },
+    {
+      "source": "/api/busidol1",
+      "destination": "http://79.133.51.198/busidol_traffic/ping.php"
+    },
+    {
+      "source": "/api/busidol2",
+      "destination": "http://103.143.208.187/busidol_traffic/ping.php"
+    },
+    {
+      "source": "/api/busidol3",
+      "destination": "http://45.42.40.173/busidol_traffic/ping.php"
+    }
+  ]
+}
