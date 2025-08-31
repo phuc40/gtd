@@ -5,7 +5,7 @@
  가능하면 size를 적게 해야 함. 서버에서 로딩속도를 줄이기 위해
 
  SKB,KT 공통의 define을 사용함.
- http://211.253.26.47:8093/TOWERDEFENCE_COMMON/define/define.js
+ https://211.253.26.47:8093/TOWERDEFENCE_COMMON/define/define.js
 
  ... 성능향상을 위해 생략함....
  20230130 SS,LG 100 stage open/ HCN pvp 통합시킴
@@ -1428,7 +1428,7 @@ function temporary_run()
 	//20240808_ywlee 긴급상황일 경우 간단한 공지 보여주고 끝.
 	if(EMERGENCY == true) //비상상황이면
 	{
-		var fname = 'http://211.253.26.47:8093/TOWERDEFENCE_AMO/GongJi/20240804_1/20240805_gtd_all_eng.png';
+		var fname = 'https://211.253.26.47:8093/TOWERDEFENCE_AMO/GongJi/20240804_1/20240805_gtd_all_eng.png';
 
 		switch(glo.platform)
 		{
@@ -1437,7 +1437,7 @@ function temporary_run()
 			case glo.PLATFORM.CJH:
 			case glo.PLATFORM.HCN:
 			case glo.PLATFORM.DLIVE:
-					fname = 'http://211.253.26.47:8093/TOWERDEFENCE_AMO/GongJi/20240804_1/20240805_gtd_all_kor.png';
+					fname = 'https://211.253.26.47:8093/TOWERDEFENCE_AMO/GongJi/20240804_1/20240805_gtd_all_kor.png';
 		}
 		var w = 804, h = 459;
 		var div = document.getElementById("div_body");
@@ -1480,7 +1480,7 @@ function temporary_run()
 	s.async		= false;
 	s.type		= 'text/javascript';
 	s.language	= 'javascript';
-	//s.src		= 'http://211.253.26.47:8093/TOWERDEFENCE_COMMON/CRYPTO/aes.js';
+	//s.src		= 'https://211.253.26.47:8093/TOWERDEFENCE_COMMON/CRYPTO/aes.js';
 	s.src		= CDN.server_list[CDN.SERVER_INDEX].aes_url;
 
 	document.body.appendChild(s);
@@ -1506,13 +1506,13 @@ function temporary_run()
 					CDN.server_list[CDN.SERVER_INDEX] =
 					{						
 						server_name	: "한국서버", 
-						ping_url		: "http://211.253.26.47:8093/ping.php",
-						min_src			: "http://211.253.26.47:8093/TOWERDEFENCE_COMMON/min/"+gLIVE_MIN,		
-						aes_url			: "http://211.253.26.47:8093/TOWERDEFENCE_COMMON/CRYPTO/aes.js",
-						img_url			: "http://211.253.26.47:8093/TOWERDEFENCE_COMMON/TOT/", //image가 있는 디렉토리
-						path_url		: "http://211.253.26.47:8093/TOWERDEFENCE_COMMON/TOT/javascript/path_data/",
+						ping_url		: "https://211.253.26.47:8093/ping.php",
+						min_src			: "https://211.253.26.47:8093/TOWERDEFENCE_COMMON/min/"+gLIVE_MIN,		
+						aes_url			: "https://211.253.26.47:8093/TOWERDEFENCE_COMMON/CRYPTO/aes.js",
+						img_url			: "https://211.253.26.47:8093/TOWERDEFENCE_COMMON/TOT/", //image가 있는 디렉토리
+						path_url		: "https://211.253.26.47:8093/TOWERDEFENCE_COMMON/TOT/javascript/path_data/",
 						pvp_url			: "ws://14.49.36.116",
-						sound_url		: "http://211.253.26.47:8093/TOWERDEFENCE_COMMON/TOT/sound/", //sound						
+						sound_url		: "https://211.253.26.47:8093/TOWERDEFENCE_COMMON/TOT/sound/", //sound						
 					}
 					break;
 			default:
@@ -2019,7 +2019,7 @@ DEFINEJS_EVENT.bug_fix = function()
 //HCN_config.js파일을 만들지 않고 define.js파일에 녹아 내기 위해 전역 3개를 밖으로 뺌.
 var gNetwork	= ''; //gNetwork : 망환경 "testbed" or "livebed" 여기에 선언된 파일은 util_CNM.js 파일에서 사용함.
 var gSiteCode	= ''; // * gSiteCode : CJH, JCN, HCN,  여기에 선언된 파일은 util_CNM.js 파일에서 사용함.
-var gSERVER_URL = ''; // http://211.253.26.46:8093 까지의 data만 들어 간다.	 platform.js파일에서 재사용한다.
+var gSERVER_URL = ''; // https://211.253.26.46:8093 까지의 data만 들어 간다.	 platform.js파일에서 재사용한다.
 var DEFINEJS_HCN_config = function()
 {
 	//HCN_config.js파일임
@@ -2033,9 +2033,9 @@ var DEFINEJS_HCN_config = function()
 		 */
 		var BED_URL =
 		{
-			LIVEBED	: 'http://10.10.18.71:9095',		// FOR CJH, JCN	// 'http://10.10.18.71:9095
-			TESTBED	: 'http://10.10.18.71:9095',		// 라이브베드와 테스트베드 구별을 안해줘서 똑같이 했음  20240221_twkim
-			PC		: 'http://211.253.26.47:8093'
+			LIVEBED	: 'https://10.10.18.71:9095',		// FOR CJH, JCN	// 'https://10.10.18.71:9095
+			TESTBED	: 'https://10.10.18.71:9095',		// 라이브베드와 테스트베드 구별을 안해줘서 똑같이 했음  20240221_twkim
+			PC		: 'https://211.253.26.47:8093'
 		};
 
 
@@ -2049,9 +2049,9 @@ var DEFINEJS_HCN_config = function()
 		 */
 		var CSSAPI_URL =
 		{
-			LIVEBED			: 'http://10.10.67.220:8105/vcs/lib/cssApi.min.js',		// live bed일때 사용한다.
-			CJH_TESTBED		: 'http://10.9.51.3:8105/CJH_VCS/cssApi.min.js',		// test bed일때 사용한다.
-			HCN_TESTBED		: 'http://192.168.137.51:8195/app/lib/cssApi.min.js',	// test bed일때 사용한다.
+			LIVEBED			: 'https://10.10.67.220:8105/vcs/lib/cssApi.min.js',		// live bed일때 사용한다.
+			CJH_TESTBED		: 'https://10.9.51.3:8105/CJH_VCS/cssApi.min.js',		// test bed일때 사용한다.
+			HCN_TESTBED		: 'https://192.168.137.51:8195/app/lib/cssApi.min.js',	// test bed일때 사용한다.
 			PC				: './javascript/HCN/cssApi.min.js'						// pc에서 테스트 할때 사용한다.
 		};
 
@@ -2787,7 +2787,7 @@ DEFINEJS_EVENT.bug_fix_LG = function()
 
 
 	//PLAY 3월31일까지만 하도록 함.
-	// http://211.253.26.47/mnt/DEMO/PLAY_20250331/01_chess/index.html DEMO버전 전용임.
+	// https://211.253.26.47/mnt/DEMO/PLAY_20250331/01_chess/index.html DEMO버전 전용임.
 	if(glo.version == "TEST_PLAY_20250331")
 	{            
 		var currentDate = new Date();// 현재 시간 가져오기
@@ -3627,7 +3627,7 @@ Main.server2_enable_for_testing(); //20250719_ywlee 테스팅을 위해호출, �
 									}
 									if(glo.SERVER_NUM == 2) WSS.PORT = 20000; //CDN.set_serverinfo()에 있는 내용을 여기서도 적어 줘야 한다.
 
-									glo.URL_prefix = CDN.get_server_url_prefix(glo.SERVER_NUM); //"http://211.253.26.47:8093/TOWERDEFENCE_SKB/";
+									glo.URL_prefix = CDN.get_server_url_prefix(glo.SERVER_NUM); //"https://211.253.26.47:8093/TOWERDEFENCE_SKB/";
 									//glo.SERVER_NUM = server_num;								
 								}
 								//여기에 연동될대 바뀌는 부분들을 모두 변경하자.
@@ -4452,43 +4452,43 @@ var CDN = //CDN.server_list[CDN.SERVER_INDEX].path_url
 						[	{},
 							{  //202403226_ywlee 서버과부하로 한국 서버를 8093 에서 8094로 변경함.
 								server_name	: "한국서버", 
-								ping_url		: "http://211.253.26.47:8093/ping.php", //DLIVE를 위해 93으로 남겨둠
-								min_src			: "http://211.253.26.47:8094/TOWERDEFENCE_COMMON/min/"+gLIVE_MIN,		
-								aes_url			: "http://211.253.26.47:8093/TOWERDEFENCE_COMMON/CRYPTO/aes.js", //요놈도 8093으로 해야 한다
-								img_url			: "http://211.253.26.47:8094/TOWERDEFENCE_COMMON/TOT/", //image가 있는 디렉토리
-								path_url		: "http://211.253.26.47:8094/TOWERDEFENCE_COMMON/TOT/javascript/path_data/",
+								ping_url		: "https://211.253.26.47:8093/ping.php", //DLIVE를 위해 93으로 남겨둠
+								min_src			: "https://211.253.26.47:8094/TOWERDEFENCE_COMMON/min/"+gLIVE_MIN,		
+								aes_url			: "https://211.253.26.47:8093/TOWERDEFENCE_COMMON/CRYPTO/aes.js", //요놈도 8093으로 해야 한다
+								img_url			: "https://211.253.26.47:8094/TOWERDEFENCE_COMMON/TOT/", //image가 있는 디렉토리
+								path_url		: "https://211.253.26.47:8094/TOWERDEFENCE_COMMON/TOT/javascript/path_data/",
 								pvp_url			: "ws://14.49.36.116",
-								sound_url		: "http://211.253.26.47:8094/TOWERDEFENCE_COMMON/TOT/sound/", //sound,
+								sound_url		: "https://211.253.26.47:8094/TOWERDEFENCE_COMMON/TOT/sound/", //sound,
 							},
 							{
 								server_name	: "독일2서버", //ultahost 월3만원, traffice 무제한
-								ping_url		: "http://79.133.51.198/busidol_traffic/ping.php",
-								min_src			: "http://79.133.51.198/busidol_traffic/GTD/min/"+gLIVE_MIN,								
-								aes_url			: "http://79.133.51.198/busidol_traffic/GTD/CRYPTO/aes.js",
-								img_url			: "http://79.133.51.198/busidol_traffic/GTD/TOT/",//image가 있는 디렉토리
-								path_url		: "http://79.133.51.198/busidol_traffic/GTD/TOT/javascript/path_data/",
+								ping_url		: "https://79.133.51.198/busidol_traffic/ping.php",
+								min_src			: "https://79.133.51.198/busidol_traffic/GTD/min/"+gLIVE_MIN,								
+								aes_url			: "https://79.133.51.198/busidol_traffic/GTD/CRYPTO/aes.js",
+								img_url			: "https://79.133.51.198/busidol_traffic/GTD/TOT/",//image가 있는 디렉토리
+								path_url		: "https://79.133.51.198/busidol_traffic/GTD/TOT/javascript/path_data/",
 								pvp_url			: "ws://79.133.51.198",
-								sound_url		: "http://79.133.51.198/busidol_traffic/GTD/TOT/sound/", //sound
+								sound_url		: "https://79.133.51.198/busidol_traffic/GTD/TOT/sound/", //sound
 							},
 							{
 								server_name	: "베트남서버",  //(GlobalHost)
-								ping_url		: "http://103.143.208.187/busidol_traffic/ping.php",
-								min_src			: "http://103.143.208.187/busidol_traffic/GTD/min/"+gLIVE_MIN,								
-								aes_url			: "http://103.143.208.187/busidol_traffic/GTD/CRYPTO/aes.js",
-								img_url			: "http://103.143.208.187/busidol_traffic/GTD/TOT/",//image가 있는 디렉토리
-								path_url		: "http://103.143.208.187/busidol_traffic/GTD/TOT/javascript/path_data/",
+								ping_url		: "https://103.143.208.187/busidol_traffic/ping.php",
+								min_src			: "https://103.143.208.187/busidol_traffic/GTD/min/"+gLIVE_MIN,								
+								aes_url			: "https://103.143.208.187/busidol_traffic/GTD/CRYPTO/aes.js",
+								img_url			: "https://103.143.208.187/busidol_traffic/GTD/TOT/",//image가 있는 디렉토리
+								path_url		: "https://103.143.208.187/busidol_traffic/GTD/TOT/javascript/path_data/",
 								pvp_url			: "ws://103.143.208.187",
-								sound_url		: "http://103.143.208.187/busidol_traffic/GTD/TOT/sound/", //sound
+								sound_url		: "https://103.143.208.187/busidol_traffic/GTD/TOT/sound/", //sound
 							},
 							{
 								server_name	: "미국서버(뉴욕)", //ultahost 월3만원, traffice 무제한
-								ping_url		: "http://45.42.40.173/busidol_traffic/ping.php",
-								min_src			: "http://45.42.40.173/busidol_traffic/GTD/min/"+gLIVE_MIN,								
-								aes_url			: "http://45.42.40.173/busidol_traffic/GTD/CRYPTO/aes.js",
-								img_url			: "http://45.42.40.173/busidol_traffic/GTD/TOT/",//image가 있는 디렉토리
-								path_url		: "http://45.42.40.173/busidol_traffic/GTD/TOT/javascript/path_data/",
+								ping_url		: "https://45.42.40.173/busidol_traffic/ping.php",
+								min_src			: "https://45.42.40.173/busidol_traffic/GTD/min/"+gLIVE_MIN,								
+								aes_url			: "https://45.42.40.173/busidol_traffic/GTD/CRYPTO/aes.js",
+								img_url			: "https://45.42.40.173/busidol_traffic/GTD/TOT/",//image가 있는 디렉토리
+								path_url		: "https://45.42.40.173/busidol_traffic/GTD/TOT/javascript/path_data/",
 								pvp_url			: "ws://45.42.40.173",
-								sound_url		: "http://45.42.40.173/busidol_traffic/GTD/TOT/sound/", //sound
+								sound_url		: "https://45.42.40.173/busidol_traffic/GTD/TOT/sound/", //sound
 							},
 
 							
@@ -4499,7 +4499,7 @@ var CDN = //CDN.server_list[CDN.SERVER_INDEX].path_url
 CDN.ping1 = function()
 {
 	var index = 1; var startTime = new Date().getTime();// 서버 응답 시간 측정 시작
-	var xhr = new XMLHttpRequest();// XMLHttpRequest 생성
+	var xhr = new XMLhttpsRequest();// XMLhttpsRequest 생성
 	xhr.open("GET", CDN.server_list[index].ping_url, true);// 서버로 요청 보내기
 	xhr.onreadystatechange = function () 
 	{ if (xhr.readyState == 4) // 응답이 완료되었을 때
@@ -4515,7 +4515,7 @@ CDN.ping1 = function()
 }
 CDN.ping2 = function()
 {
-	var index = 2; var startTime = new Date().getTime();var xhr = new XMLHttpRequest();
+	var index = 2; var startTime = new Date().getTime();var xhr = new XMLhttpsRequest();
 	xhr.open("GET", CDN.server_list[index].ping_url, true);
 	xhr.onreadystatechange = function () 
 	{  if (xhr.readyState == 4)
@@ -4531,7 +4531,7 @@ CDN.ping2 = function()
 }
 CDN.ping3 = function()
 {
-	var index = 3; var startTime = new Date().getTime();var xhr = new XMLHttpRequest();
+	var index = 3; var startTime = new Date().getTime();var xhr = new XMLhttpsRequest();
 	xhr.open("GET", CDN.server_list[index].ping_url, true);
 	xhr.onreadystatechange = function () 
 	{  if (xhr.readyState == 4)
@@ -4547,7 +4547,7 @@ CDN.ping3 = function()
 }
 CDN.ping4 = function()
 {
-	var index = 4; var startTime = new Date().getTime();var xhr = new XMLHttpRequest();
+	var index = 4; var startTime = new Date().getTime();var xhr = new XMLhttpsRequest();
 	xhr.open("GET", CDN.server_list[index].ping_url, true);
 	xhr.onreadystatechange = function () 
 	{  if (xhr.readyState == 4)
@@ -4586,19 +4586,19 @@ CDN.set_serverinfo = function()
 				CDN.server_list[1]=	
 										{
 											server_name	: "골타디서버#2(베트남에위치함)", 
-											ping_url			: "http://103.143.208.18/ping.php",
-											min_src			: "http://103.143.208.18/TOWERDEFENCE_COMMON/min/"+gLIVE_MIN,		
-											aes_url				: "http://103.143.208.18/TOWERDEFENCE_COMMON/CRYPTO/aes.js",
-											img_url			: "http://103.143.208.18/TOWERDEFENCE_COMMON/TOT/", //image가 있는 디렉토리
-											path_url			: "http://103.143.208.18/TOWERDEFENCE_COMMON/TOT/javascript/path_data/",
+											ping_url			: "https://103.143.208.18/ping.php",
+											min_src			: "https://103.143.208.18/TOWERDEFENCE_COMMON/min/"+gLIVE_MIN,		
+											aes_url				: "https://103.143.208.18/TOWERDEFENCE_COMMON/CRYPTO/aes.js",
+											img_url			: "https://103.143.208.18/TOWERDEFENCE_COMMON/TOT/", //image가 있는 디렉토리
+											path_url			: "https://103.143.208.18/TOWERDEFENCE_COMMON/TOT/javascript/path_data/",
 											pvp_url			: "ws://103.143.208.187", //pvp서버는 우선 베트남의 pvp서버 이용해 보자
-											sound_url		: "http://103.143.208.18/TOWERDEFENCE_COMMON/TOT/sound/", //sound
+											sound_url		: "https://103.143.208.18/TOWERDEFENCE_COMMON/TOT/sound/", //sound
 										};
 */		
 				if(util.get_platform_for_db() == glo.PLATFORM.IOS)
-					glo.URL_prefix = "https://game.busidol.com/TOWERDEFENCE_IOS_Server2/"; //이놈의 크다. ios의경우는 좀더 다르게 처리 해야 한다.
+					glo.URL_prefix = "httpss://game.busidol.com/TOWERDEFENCE_IOS_Server2/"; //이놈의 크다. ios의경우는 좀더 다르게 처리 해야 한다.
 				else
-					glo.URL_prefix = "http://103.143.208.18/TOWERDEFENCE_"+util.get_platform_for_db() +"/"; //이놈의 크다. ios의경우는 좀더 다르게 처리 해야 한다.
+					glo.URL_prefix = "https://103.143.208.18/TOWERDEFENCE_"+util.get_platform_for_db() +"/"; //이놈의 크다. ios의경우는 좀더 다르게 처리 해야 한다.
 
 
 				//골타디PVP전용서버사용함. - //20231012_ywlee 각 리전별 PVP서버 생성
@@ -4615,16 +4615,16 @@ CDN.get_server_url_prefix = function(server_num)
 	{
 		switch(server_num)
 		{
-			case 1: return "https://game.busidol.com/TOWERDEFENCE_IOS/";
-			case 2: return "https://game.busidol.com/TOWERDEFENCE_IOS_Server2/";
+			case 1: return "httpss://game.busidol.com/TOWERDEFENCE_IOS/";
+			case 2: return "httpss://game.busidol.com/TOWERDEFENCE_IOS_Server2/";
 		}
 	}
 	else
 	{
 		switch(server_num)
 		{
-			case 1: return "http://211.253.26.47:8093/TOWERDEFENCE_"+glo.platform+"/";
-			case 2: return "http://103.143.208.18/TOWERDEFENCE_"+glo.platform+"/";
+			case 1: return "https://211.253.26.47:8093/TOWERDEFENCE_"+glo.platform+"/";
+			case 2: return "https://103.143.208.18/TOWERDEFENCE_"+glo.platform+"/";
 		}
 	}
 }
