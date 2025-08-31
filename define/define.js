@@ -4452,7 +4452,7 @@ var CDN = //CDN.server_list[CDN.SERVER_INDEX].path_url
 						[	{},
 							{  //202403226_ywlee 서버과부하로 한국 서버를 8093 에서 8094로 변경함.
 								server_name	: "한국서버", 
-								ping_url		: "https://gtd-peach.vercel.app/api/busidol1", //DLIVE를 위해 93으로 남겨둠
+								ping_url		: "https://gtd-peach.vercel.app/api/ping", //DLIVE를 위해 93으로 남겨둠
 								min_src			: "http://211.253.26.47:8094/TOWERDEFENCE_COMMON/min/"+gLIVE_MIN,		
 								aes_url			: "http://211.253.26.47:8093/TOWERDEFENCE_COMMON/CRYPTO/aes.js", //요놈도 8093으로 해야 한다
 								img_url			: "http://211.253.26.47:8094/TOWERDEFENCE_COMMON/TOT/", //image가 있는 디렉토리
@@ -4462,7 +4462,7 @@ var CDN = //CDN.server_list[CDN.SERVER_INDEX].path_url
 							},
 							{
 								server_name	: "독일2서버", //ultahost 월3만원, traffice 무제한
-								ping_url		: "https://gtd-peach.vercel.app/api/busidol2",
+								ping_url		: "https://gtd-peach.vercel.app/api/busidol1",
 								min_src			: "http://79.133.51.198/busidol_traffic/GTD/min/"+gLIVE_MIN,								
 								aes_url			: "http://79.133.51.198/busidol_traffic/GTD/CRYPTO/aes.js",
 								img_url			: "http://79.133.51.198/busidol_traffic/GTD/TOT/",//image가 있는 디렉토리
@@ -4472,7 +4472,7 @@ var CDN = //CDN.server_list[CDN.SERVER_INDEX].path_url
 							},
 							{
 								server_name	: "베트남서버",  //(GlobalHost)
-								ping_url		: "https://gtd-peach.vercel.app/api/busidol3",
+								ping_url		: "https://gtd-peach.vercel.app/api/busidol2",
 								min_src			: "http://103.143.208.187/busidol_traffic/GTD/min/"+gLIVE_MIN,								
 								aes_url			: "http://103.143.208.187/busidol_traffic/GTD/CRYPTO/aes.js",
 								img_url			: "http://103.143.208.187/busidol_traffic/GTD/TOT/",//image가 있는 디렉토리
@@ -4482,7 +4482,7 @@ var CDN = //CDN.server_list[CDN.SERVER_INDEX].path_url
 							},
 							{
 								server_name	: "미국서버(뉴욕)", //ultahost 월3만원, traffice 무제한
-								ping_url		: "https://gtd-peach.vercel.app/api/busidol4",
+								ping_url		: "https://gtd-peach.vercel.app/api/busidol3",
 								min_src			: "http://45.42.40.173/busidol_traffic/GTD/min/"+gLIVE_MIN,								
 								aes_url			: "http://45.42.40.173/busidol_traffic/GTD/CRYPTO/aes.js",
 								img_url			: "http://45.42.40.173/busidol_traffic/GTD/TOT/",//image가 있는 디렉토리
